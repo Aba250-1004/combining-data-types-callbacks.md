@@ -89,3 +89,104 @@ const options = () =>{
 }
 
 powerButton(options);
+
+// Model a Vending Machine Model a vending machine
+
+// a vending machine is an object
+vendingMachine = {
+    
+}
+
+// it has an array of snacks (make 3 snacks)
+vendingMachine.snacks = ["snack1","snack2","snack3"]
+
+// snacks are objects that have a name and a price
+vendingMachine.snacks = [
+    {
+        name:"snack1",
+        price:2,
+    },
+    {
+        name:"snack2",
+        price:3,
+    },
+    {
+        name:"snack3",
+        price:4,
+    }
+]
+
+// a vending machine has a function vend that allows 
+// user to enter the array position (a number) of 
+// the snack and then that snack will be returned
+vendingMachine.vend = (input) => {
+    if (input >= 0 && input < vendingMachine.snacks.length){
+        return vendingMachine.snacks[input]
+    }
+}
+
+// Be able to call vendingMachine.vend() with a 
+// alid integer to return a snack
+console.log(vendingMachine.vend(2));
+
+
+// Make a function add that takes two 
+// arguments (numbers) and sums them together
+const add = (num1,num2) => {
+    return num1 + num2;
+}
+
+// Make a function subtract that takes
+// two arguments (numbers) and subtracts them
+const subtract = (num1,num2) => {
+    return num1 - num2;
+}
+
+// Make a function multiply that takes two 
+// arguments and multiplies them
+const multiply = (num1,num2) => {
+    return num1 * num2;
+}
+
+// Make a function divide that takes two 
+// arguments and divides them
+const divide = (num1,num2) => {
+    return num1 / num2;
+}
+
+// Make a function calculate that takes three 
+// arguments. Assume the two arguments are a number 
+// ie num1, num2 and a function called operates (a callback).
+const calculate = (num1,num2, operates) => {
+    return operates(num1,num2);
+}
+
+// Call calculate 4 times, each time using one of 
+// the operation functions you wrote
+console.log(calculate(2,2,add))
+console.log(calculate(2,2,subtract))
+console.log(calculate(2,2,multiply))
+console.log(calculate(2,2,divide))
+
+// fixed code 
+
+const bar = () => {
+    console.log('bar here');
+}
+bar();
+
+const foo = () => {
+    console.log('foo here');
+}
+foo();
+
+// error 1 missing intializer meaning missing = in declration 
+// error 2 cannot  call foo before intialized so you must call the 
+// the function after it was created
+// correct code below
+
+const foo1 = ()=>{
+    console.log('hi');
+}
+foo1();
+
